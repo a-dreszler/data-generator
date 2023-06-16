@@ -8,6 +8,21 @@ import java.util.stream.Stream;
 
 @Service
 class DataGeneratorService {
+    
+    List<List<String>> getDataTableRows(int entries, Map<String, List<String>> dataMap) {
+        List<List<String>> dataTable = new ArrayList<>();
+        List<String> headerRow = new ArrayList<>(dataMap.keySet());
+        dataTable.add(headerRow);
+        for (int i = 0; i < entries; i++) {
+            List<String> row = new ArrayList<>();
+            for (Map.Entry<String, List<String>> column : dataMap.entrySet()) {
+                row.add(column.getValue().get(i));
+            }
+            dataTable.add(row);
+        }
+
+        return dataTable;
+    }
 
     Map<String, List<String>> getDataMap(int entries, String lang, boolean firstNameFlag, boolean lastNameFlag,
                                          boolean universityFlag, boolean countryFlag) {
