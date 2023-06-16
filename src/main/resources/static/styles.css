@@ -1,0 +1,24 @@
+h1 {
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 40%;
+}
+
+fieldset {
+    text-align: center;
+}
+
+label, input {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+button {
+    margin: 0.5rem auto;
+    width: 8rem;
+}
