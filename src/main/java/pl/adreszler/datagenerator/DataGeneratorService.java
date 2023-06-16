@@ -3,10 +3,7 @@ package pl.adreszler.datagenerator;
 import com.github.javafaker.Faker;
 import org.springframework.stereotype.Service;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Locale;
-import java.util.Map;
+import java.util.*;
 import java.util.stream.Stream;
 
 @Service
@@ -15,7 +12,7 @@ class DataGeneratorService {
     Map<String, List<String>> getDataMap(int entries, String lang, boolean firstNameFlag, boolean lastNameFlag,
                                          boolean universityFlag, boolean countryFlag) {
         Faker generator = new Faker(new Locale(lang));
-        Map<String, List<String>> dataMap = new HashMap<>();
+        Map<String, List<String>> dataMap = new LinkedHashMap<>();
         if (firstNameFlag) {
             List<String> firstNames = Stream.generate(() -> generator.name().firstName())
                     .limit(entries)
