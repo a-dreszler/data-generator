@@ -12,4 +12,12 @@ class DataGeneratorDto {
         this.dataMap = dataMap;
         this.entries = entries;
     }
+
+    public Map<String, List<String>> getDataMap() {
+        return dataMap;
+    }
+
+    public int getEntries() {
+        return entries;
+    }
 }
