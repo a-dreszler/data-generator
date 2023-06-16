@@ -2,6 +2,20 @@ h1 {
     text-align: center;
 }
 
+table {
+     margin: auto;
+}
+
+table, td, th {
+    border: 1px solid;
+    border-collapse: collapse;
+}
+
+td, th {
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
 form {
     display: flex;
     flex-direction: column;
