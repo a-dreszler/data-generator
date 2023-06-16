@@ -15,10 +15,10 @@ class DataGeneratorService {
         Faker generator = new Faker(new Locale(lang));
         Map<String, List<String>> dataMap = new LinkedHashMap<>();
         if (firstNameFlag) {
-            dataMap.put("First name", generateData(entries, generator.university()::name));
+            dataMap.put("First name", generateData(entries, generator.name()::firstName));
         }
         if (lastNameFlag) {
-            dataMap.put("Last name", generateData(entries, generator.university()::name));
+            dataMap.put("Last name", generateData(entries, generator.name()::lastName));
         }
         if (universityFlag) {
             dataMap.put("Universities", generateData(entries, generator.university()::name));
