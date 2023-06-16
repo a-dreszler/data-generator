@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Data generator</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <h1>Data generator</h1>
+        <form action="/generate" method="post">
+            <fieldset>
+                <div>
+                    <label for="entries">How many entries do you want to generate?</label>
+                    <input type="number" min="1" name="entries" id="entries">
+                </div>
+                <div>
+                    <label for="language">Choose data language</label>
+                    <select name="language" id="language">
+                        <option value="pl">Polski</option>
+                        <option value="de">Deutsch</option>
+                        <option value="en">English</option>
+                    </select>
+                </div>
+            </fieldset>
+            <fieldset>
+                <p>What do you want to generate?</p>
+                <label for="first-name">First name</label>
+                <input type="checkbox" name="firstName" id="first-name">
+                <label for="last-name">Last name</label>
+                <input type="checkbox" name="lastName" id="last-name">
+                <label for="university">University</label>
+                <input type="checkbox" name="university" id="university">
+                <label for="country">Country</label>
+                <input type="checkbox" name="country" id="country">
+            </fieldset>
+            <button type="submit">
+                Generate data
+            </button>
+        </form>
+    </body>
+</html>
